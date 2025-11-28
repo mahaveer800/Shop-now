@@ -1,0 +1,151 @@
+/* ---------------- Product Detail Page --------------- */
+
+.detailsContainer {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  /* gap: 2px; */
+  padding: 5px;
+}
+
+
+
+/* Left Side – Images */
+.leftBox {
+  width: 70%;
+  /* height: 12rem; */
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#pImg {
+  width: 80%;
+  height: 500px;
+  object-fit: contain;
+  border-radius: 10px;
+  /* background:#f5f5f5; */
+}
+
+/* Right Side – Details */
+.rightBox {
+  width: 40%;
+  height: fit-content;
+  padding: 10px;
+  margin-top: 4rem;
+  border-radius: 10px;
+  background-color: #d9d1cd;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.rightBox h2 {
+  font-size: 28px;
+  color: #170101e6;
+}
+
+#pPrice {
+  margin: 10px 0;
+  display: flex;
+  gap: 1px;
+  align-items: center;
+}
+
+#pPrice {
+  font-size: 25px;
+  color: #e63946;
+  font-weight: bold;
+}
+
+#pOld {
+  color: grey;
+  text-decoration: line-through;
+}
+
+#pOff {
+  color: #008000;
+  font-weight: bold;
+}
+
+.btn-box {
+  margin-top: 25px;
+  display: flex;
+  gap: 4px;
+}
+
+.btn-box button {
+  padding: 15px 30px;
+  /* border-radius: 8px; */
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+}
+
+#addToCart {
+  background: #04eb04b3;
+  color: #fff;
+  height: 3.5rem;
+}
+#buyNow {
+  background: #d14c4c;
+  color: #fff;
+}
+
+#addToCart:hover {
+  background: #e68f00;
+}
+
+.buy-now:hover {
+  background: #d95810;
+}
+
+@media (max-width: 480px) {
+
+ .navbar {
+    flex-direction: column;
+    height: auto;
+    width: 18rem;
+    /* background-color: #008000; */
+  }
+
+  ul {
+    width: 100%;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    /* background-color: #d14c4c; */
+  }
+
+.detailsContainer{
+    display: flex;
+    flex-direction: column;
+    width: 68vw;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #008000; */
+    padding: 1rem;
+    margin: 1rem;
+    margin-left: -1rem;
+}
+.leftBox{
+    height: 22rem;
+    width: 68vw;
+    /* background-color: #d95810; */
+    padding: 1rem;
+}
+
+#pImg{
+    /* margin-top: rem; */
+   height: 22rem;
+   width: 19rem;
+   object-fit: cover;
+}
+.rightBox {
+    width: 17rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+}

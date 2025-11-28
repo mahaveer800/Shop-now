@@ -1,0 +1,57 @@
+.Product {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 21px;
+    padding: 22px;
+    /* margin-top: rem; */
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+    padding-bottom: 10px;
+}
+
+.card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.599);
+    transform: scale(1.03);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 16px;
+    margin: 10px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.oldPrice {
+    text-decoration: line-through;
+    color: gray;
+    margin-left: 10px;
+}
+
+.discount {
+    color: green;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+@media (max-width: 480px) {
+    .Product{
+        margin-top: -5.2rem;
+    }
+}
