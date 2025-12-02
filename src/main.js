@@ -1,6 +1,6 @@
  import './style.css'
- import './Product.css'
- import './Product.js'
+import './Product.css'
+//  import './Product.js'
 //  import './productDetails.js'
  import products from '../Api/Pruduct.json'
 

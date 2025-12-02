@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Gateway</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            width: 360px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+        }
+
+        .row {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            background: #007bff;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #005ecb;
+        }
+
+        .success {
+            color: green;
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+            display: none;
+        }
+
+        .error {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+            display: none;
+        }
+        .backBtn{
+            width: 8rem;
+            position:absolute;
+            top: 1px;
+            left: 1px;
+            background-color: transparent;
+            box-shadow: 5px 6px 8px .8px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<button class="backBtn"><a href="../index.html">Go Back</a></button>
+
+    <div class="container">
+        <h2>Payment Gateway</h2>
+         
+        <label>Card Holder Name</label>
+        <input type="text" id="name" placeholder="Your Name">
+
+        <label>Card Number</label>
+        <input type="text" id="cardNumber" placeholder="xxxx xxxx xxxx xxxx" maxlength="16">
+
+        <div class="row">
+            <div style="width: 50%;">
+                <label>Expiry</label>
+                <input type="month" id="expiry">
+            </div>
+
+            <div style="width: 50%;">
+                <label>CVV</label>
+                <input type="password" id="cvv" maxlength="3" placeholder="123">
+            </div>
+        </div>
+
+        <button onclick="makePayment()">Pay Now</button>
+
+        <p class="success" id="successMsg">Payment Successful ✔</p>
+        <p class="error" id="errorMsg">Please fill all details correctly!</p>
+    </div>
+
+
+    <script>
+        function makePayment() {
+            let name = document.getElementById("name").value.trim();
+            let card = document.getElementById("cardNumber").value.trim();
+            let expiry = document.getElementById("expiry").value;
+            let cvv = document.getElementById("cvv").value.trim();
+
+            let success = document.getElementById("successMsg");
+            let error = document.getElementById("errorMsg");
+
+            success.style.display = "none";
+            error.style.display = "none";
+
+            if (name === "" || card.length !== 16 || expiry === "" || cvv.length !== 3) {
+                error.style.display = "block";
+                return;
+            }
+
+            success.style.display = "block";
+
+            setTimeout(() => {
+                alert("Payment Completed Successfully!");
+            }, 500);
+        }
+    </script>
+
+</body>
+</html>
