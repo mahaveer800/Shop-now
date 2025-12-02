@@ -1,3 +1,7 @@
+ import './style.css'
+import './Product.css'
+import './productDetails.css'
+
 function updateCartCount() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     let counterEl = document.getElementById("cartCount");

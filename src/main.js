@@ -24,7 +24,7 @@ products.forEach((item) => {
   // ⭐ CLICK = GO TO DETAILS PAGE
  div.addEventListener("click", () => {
   localStorage.setItem("singleProduct", JSON.stringify(item));
-  window.location.href = "./src/productDetails.html"; 
+  window.location.href = "./productDetails.html"; 
 });
 
 
@@ -51,7 +51,7 @@ let cartBtn = document.getElementById("AddBtn");
 
 if (cartBtn) {
     cartBtn.addEventListener("click", () => {
-        window.location.href = "./src/cart.html";
+        window.location.href = "./cart.html";
  // cart page open
     });
 }

@@ -1,3 +1,8 @@
+ import './style.css'
+import './Product.css'
+import './productDetails.css'
+
+
 let product = JSON.parse(localStorage.getItem("singleProduct"));
 
 // ---------- SAFE CHECKS for product detail elements ----------
